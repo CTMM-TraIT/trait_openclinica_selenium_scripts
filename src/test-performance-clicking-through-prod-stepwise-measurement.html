@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www-acc.openclinica.nl/" />
+<title>test-performance-clicking-through-prod-stepwise-measurement</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test-performance-clicking-through-prod-stepwise-measurement</td></tr>
+</thead><tbody>
+<tr>
+	<td>forXml</td>
+	<td>authentication.xml</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>startTimeGlobal</td>
+</tr>
+<tr>
+	<td>windowMaximize</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/OpenClinica/pages/login/login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>${testUID}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=j_password</td>
+	<td>${testPWD}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Subject Matrix</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>startTime</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>endTime</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{(storedVars[&quot;endTime&quot;].getTime() - storedVars[&quot;startTime&quot;].getTime())}</td>
+	<td>duration</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result of test run: Click_through_subject_matrix_size_10. Duration ${duration} ms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>startTime</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>name=maxRows</td>
+	<td>label=50</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>endTime</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{(storedVars[&quot;endTime&quot;].getTime() - storedVars[&quot;startTime&quot;].getTime())}</td>
+	<td>duration</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result of test run: Click_through_subject_matrix_size_50. Duration ${duration} ms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>startTime</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Notes &amp; Discrepancies</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Study Audit Log</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>endTime</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{(storedVars[&quot;endTime&quot;].getTime() - storedVars[&quot;startTime&quot;].getTime())}</td>
+	<td>duration</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result of test run: Click_through_notes_and_discrepancies_size_10. Duration ${duration} ms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>startTime</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>name=maxRows</td>
+	<td>label=50</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>endTime</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{(storedVars[&quot;endTime&quot;].getTime() - storedVars[&quot;startTime&quot;].getTime())}</td>
+	<td>duration</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result of test run: Click_through_notes_and_discrepancies_size_50. Duration ${duration} ms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>startTime</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View Datasets</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=bt_View1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View Study</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=bt_View1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Source Data Verification</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View By Study Subject ID</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>endTime</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{(storedVars[&quot;endTime&quot;].getTime() - storedVars[&quot;startTime&quot;].getTime())}</td>
+	<td>duration</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result of test run: Click_through_SDV_size_10. Duration ${duration} ms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>startTime</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>name=maxRows</td>
+	<td>label=50</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>endTime</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{(storedVars[&quot;endTime&quot;].getTime() - storedVars[&quot;startTime&quot;].getTime())}</td>
+	<td>duration</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result of test run: Click_through_SDV. Duration ${duration} ms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>startTime</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View Events</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=startDateField</td>
+	<td>01-Mar-2000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Next&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>endTime</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{(storedVars[&quot;endTime&quot;].getTime() - storedVars[&quot;startTime&quot;].getTime())}</td>
+	<td>duration</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result of test run: Edit_event_view_all_events. Duration ${duration} ms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Build Study</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//img[@alt='View'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Go back to the Build Study page</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;View&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Log Out</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>OpenClinica</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>endTimeGlobal</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{(storedVars[&quot;endTimeGlobal&quot;].getTime() - storedVars[&quot;startTimeGlobal&quot;].getTime())}</td>
+	<td>duration</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result of test run: test ClickingThrough completed successfully at ${endTimeGlobal}. Duration ${duration} ms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endForXml</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
