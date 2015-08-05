@@ -1,0 +1,118 @@
+<!--
+Set of rules to test the performance of OC with rules. Each field is equal to the previous one + 1
+-->
+<RuleImport>
+	<RuleAssignment>
+		<Target Context="OC_RULES_V1">SE_PERFORMANCE_MEASUREMENT.F_TESTPERFORMA_002.IG_TESTP_UNGROUPED.I_TESTP_TEST_PERF_ADENOMAS_MULTIPLE</Target>
+		<RuleRef OID="R_I_TESTP_TEST_PERF_ADENOMAS_MULTIPLE_1">
+			<InsertAction IfExpressionEvaluates="true">
+				<Run AdministrativeDataEntry="true" InitialDataEntry="true" DoubleDataEntry="true" ImportDataEntry="false" Batch="false"/>			
+				<DestinationProperty OID="I_TESTP_TEST_PERF_BANNAYAN_RILEY_RU" Value="11">					
+				</DestinationProperty>
+			</InsertAction>			
+		</RuleRef>
+	</RuleAssignment>
+	<RuleAssignment>
+		<Target Context="OC_RULES_V1">SE_PERFORMANCE_MEASUREMENT.F_TESTPERFORMA_002.IG_TESTP_UNGROUPED.I_TESTP_TEST_PERF_BASAL_CELL_NEVUS_</Target>
+		<RuleRef OID="R_I_TESTP_TEST_PERF_BASAL_CELL_NEVUS_1">
+			<InsertAction IfExpressionEvaluates="true">
+				<Run AdministrativeDataEntry="true" InitialDataEntry="true" DoubleDataEntry="true" ImportDataEntry="false" Batch="false"/>			
+				<DestinationProperty OID="I_TESTP_TEST_PERF_BIRT_HOGG_DUBE_SY" Value="22">					
+				</DestinationProperty>
+			</InsertAction>			
+		</RuleRef>
+	</RuleAssignment>
+	<RuleAssignment>
+		<Target Context="OC_RULES_V1">SE_PERFORMANCE_MEASUREMENT.F_TESTPERFORMA_002.IG_TESTP_UNGROUPED.I_TESTP_TEST_PERF_COWDEN_SYNDROME</Target>
+		<RuleRef OID="R_I_TESTP_TEST_PERF_COWDEN_SYNDROME_1">
+			<InsertAction IfExpressionEvaluates="true">
+				<Run AdministrativeDataEntry="true" InitialDataEntry="true" DoubleDataEntry="true" ImportDataEntry="false" Batch="false"/>			
+				<DestinationProperty OID="I_TESTP_TEST_PERF_FAMILIAL_ADENOMAT" Value="33">					
+				</DestinationProperty>
+			</InsertAction>			
+		</RuleRef>
+	</RuleAssignment>	
+	<RuleAssignment>
+		<Target Context="OC_RULES_V1">SE_PERFORMANCE_MEASUREMENT.F_TESTPERFORMA_002.IG_TESTP_UNGROUPED.I_TESTP_TEST_PERF_FAMILIAL_NONPOLYP</Target>
+		<RuleRef OID="R_I_TESTP_TEST_PERF_FAMILIAL_NONPOLYP_1">
+			<InsertAction IfExpressionEvaluates="true">
+				<Run AdministrativeDataEntry="true" InitialDataEntry="true" DoubleDataEntry="true" ImportDataEntry="false" Batch="false"/>			
+				<DestinationProperty OID="I_TESTP_TEST_PERF_HEREDITARY_PROSTA" Value="44">					
+				</DestinationProperty>
+			</InsertAction>			
+		</RuleRef>
+	</RuleAssignment>	
+	<RuleAssignment>
+		<Target Context="OC_RULES_V1">SE_PERFORMANCE_MEASUREMENT.F_TESTPERFORMA_002.IG_TESTP_UNGROUPED.I_TESTP_TEST_PERF_JUVENILE_POLYPOSI</Target>
+		<RuleRef OID="R_I_TESTP_TEST_PERF_JUVENILE_POLYPOSI_1">
+			<InsertAction IfExpressionEvaluates="true">
+				<Run AdministrativeDataEntry="true" InitialDataEntry="true" DoubleDataEntry="true" ImportDataEntry="false" Batch="false"/>			
+				<DestinationProperty OID="I_TESTP_TEST_PERF_PANCREATIC_CANCER" Value="55">					
+				</DestinationProperty>
+			</InsertAction>			
+		</RuleRef>
+	</RuleAssignment>	
+	<RuleAssignment>
+		<Target Context="OC_RULES_V1">SE_PERFORMANCE_MEASUREMENT.F_TESTPERFORMA_002.IG_TESTP_UNGROUPED.I_TESTP_TEST_PERF_PEUTZ_JEGHERS_SYN</Target>
+		<RuleRef OID="R_I_TESTP_TEST_PERF_PEUTZ_JEGHERS_SYN_1">
+			<InsertAction IfExpressionEvaluates="true">
+				<Run AdministrativeDataEntry="true" InitialDataEntry="true" DoubleDataEntry="true" ImportDataEntry="false" Batch="false"/>			
+				<DestinationProperty OID="I_TESTP_TEST_PERF_PTEN_HEMARTOMA_TU" Value="66">					
+				</DestinationProperty>
+			</InsertAction>			
+		</RuleRef>
+	</RuleAssignment>	
+	<RuleAssignment>
+		<Target Context="OC_RULES_V1">SE_PERFORMANCE_MEASUREMENT.F_TESTPERFORMA_002.IG_TESTP_UNGROUPED.I_TESTP_TEST_PERF_WILMS_TUMOR</Target>
+		<RuleRef OID="R_I_TESTP_TEST_PERF_WILMS_TUMOR_1">
+			<InsertAction IfExpressionEvaluates="true">
+				<Run AdministrativeDataEntry="true" InitialDataEntry="true" DoubleDataEntry="true" ImportDataEntry="false" Batch="false"/>			
+				<DestinationProperty OID="I_TESTP_TEST_PERF_AMYLOIDOSIS_HERED" Value="77">					
+				</DestinationProperty>
+			</InsertAction>			
+		</RuleRef>
+	</RuleAssignment>	
+	<RuleAssignment>
+		<Target Context="OC_RULES_V1">SE_PERFORMANCE_MEASUREMENT.F_TESTPERFORMA_002.IG_TESTP_UNGROUPED.I_TESTP_TEST_PERF_ARRHYTHMOGENIC_RI</Target>
+		<RuleRef OID="R_I_TESTP_TEST_PERF_ARRHYTHMOGENIC_RI_1">
+			<InsertAction IfExpressionEvaluates="true">
+				<Run AdministrativeDataEntry="true" InitialDataEntry="true" DoubleDataEntry="true" ImportDataEntry="false" Batch="false"/>			
+				<DestinationProperty OID="I_TESTP_TEST_PERF_ATRIAL_FIBRILLATI" Value="88">					
+				</DestinationProperty>
+			</InsertAction>			
+		</RuleRef>
+	</RuleAssignment>
+	
+	<RuleDef OID="R_I_TESTP_TEST_PERF_ADENOMAS_MULTIPLE_1" Name="Item 1 versus item 2">
+		<Description>Next item should be equal to the previous one + 1</Description>
+		<Expression>I_TESTP_TEST_PERF_ADENOMAS_MULTIPLE ne "" and I_TESTP_TEST_PERF_ADENOMAS_MULTIPLE gt 0</Expression>
+	</RuleDef>			
+	<RuleDef OID="R_I_TESTP_TEST_PERF_BASAL_CELL_NEVUS_1" Name="Item 2 versus item 3">
+		<Description>Next item should be equal to the previous one + 1</Description>
+		<Expression>I_TESTP_TEST_PERF_BASAL_CELL_NEVUS_ ne "" and I_TESTP_TEST_PERF_BASAL_CELL_NEVUS_ gt 0</Expression>
+	</RuleDef>	
+	<RuleDef OID="R_I_TESTP_TEST_PERF_COWDEN_SYNDROME_1" Name="Item 3 versus item 4">
+		<Description>Next item should be equal to the previous one + 1</Description>
+		<Expression>I_TESTP_TEST_PERF_COWDEN_SYNDROME ne "" and I_TESTP_TEST_PERF_COWDEN_SYNDROME gt 0</Expression>
+	</RuleDef>	
+	<RuleDef OID="R_I_TESTP_TEST_PERF_FAMILIAL_NONPOLYP_1" Name="Item 4 versus item 5">
+		<Description>Next item should be equal to the previous one + 1</Description>
+		<Expression>I_TESTP_TEST_PERF_FAMILIAL_NONPOLYP ne "" and I_TESTP_TEST_PERF_FAMILIAL_NONPOLYP gt 0</Expression>
+	</RuleDef>
+	<RuleDef OID="R_I_TESTP_TEST_PERF_JUVENILE_POLYPOSI_1" Name="Item 5 versus item 6">
+		<Description>Next item should be equal to the previous one + 1</Description>
+		<Expression>I_TESTP_TEST_PERF_JUVENILE_POLYPOSI ne "" and I_TESTP_TEST_PERF_JUVENILE_POLYPOSI gt 0</Expression>
+	</RuleDef>	
+	<RuleDef OID="R_I_TESTP_TEST_PERF_PEUTZ_JEGHERS_SYN_1" Name="Item 6 versus item 7">
+		<Description>Next item should be equal to the previous one + 1</Description>
+		<Expression>I_TESTP_TEST_PERF_PEUTZ_JEGHERS_SYN ne "" and I_TESTP_TEST_PERF_PEUTZ_JEGHERS_SYN gt 0</Expression>
+	</RuleDef>
+	<RuleDef OID="R_I_TESTP_TEST_PERF_WILMS_TUMOR_1" Name="Item 7 versus item 8">
+		<Description>Next item should be equal to the previous one + 1</Description>
+		<Expression>I_TESTP_TEST_PERF_WILMS_TUMOR ne "" and I_TESTP_TEST_PERF_WILMS_TUMOR gt 0</Expression>
+	</RuleDef>
+	<RuleDef OID="R_I_TESTP_TEST_PERF_ARRHYTHMOGENIC_RI_1" Name="Item 8 versus item 9">
+		<Description>Next item should be equal to the previous one + 1</Description>
+		<Expression>I_TESTP_TEST_PERF_ARRHYTHMOGENIC_RI ne "" and I_TESTP_TEST_PERF_ARRHYTHMOGENIC_RI gt 0</Expression>
+	</RuleDef>	
+</RuleImport>

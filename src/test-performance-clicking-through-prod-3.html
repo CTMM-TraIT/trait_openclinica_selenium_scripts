@@ -12,11 +12,6 @@
 <tr><td rowspan="1" colspan="3">test-performance-clicking-through-prod-3</td></tr>
 </thead><tbody>
 <tr>
-	<td>forXml</td>
-	<td>authentication.xml</td>
-	<td></td>
-</tr>
-<tr>
 	<td>storeEval</td>
 	<td>{new Date()}</td>
 	<td>startTime</td>
@@ -32,14 +27,19 @@
 	<td></td>
 </tr>
 <tr>
+	<td>loadCustomVariables</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=username</td>
-	<td>${testUID}</td>
+	<td>${userID}</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=j_password</td>
-	<td>${testPWD}</td>
+	<td>${userPWD}</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -324,11 +324,6 @@
 <tr>
 	<td>echo</td>
 	<td>Result of test run: test ClickingThrough completed successfully at ${endTime}. Duration ${duration} ms</td>
-	<td></td>
-</tr>
-<tr>
-	<td>endForXml</td>
-	<td></td>
 	<td></td>
 </tr>
 </tbody></table>
