@@ -1,0 +1,1 @@
+This directory contains the graphs (*.png) output of the gnuplot.script
