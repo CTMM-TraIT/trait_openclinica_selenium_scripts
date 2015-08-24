@@ -1,0 +1,7 @@
+set yrange[0:2500]
+set xrange[0:100]
+set xlabel "Measurement"
+set ylabel "Duration [ms]"
+set title '{/=25  Save section 2 (Lab) - VUmc ONC-PC306   }{/=15 Since 7th of August 2015}'
+set output '..\graphs\Save-section-2-Lab.png'
+plot '.\Extended_Section2_Save-VUmc-ONC-PC306.dat' using 9:xtic(24) with lines title 'Duration saving' linetype 7
