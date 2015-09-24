@@ -1,59 +1,78 @@
 set yrange[0:70000]
 set xlabel "Day Of Week"
 set ylabel "Time in ms"
+set datafile missing ""
+set datafile separator "\t "
 
 
-
-set yrange[0:35000]
-set xlabel "Day Of Week"
+# -----------------------------------------
+# Editing of an existing subject
+# -----------------------------------------
+set yrange[0:18000]
+set xlabel "Days"
 set ylabel "Time in ms"
 set title '{/=25 Duration Edit Existing Subject - VUmc ONC-PC306   }{/=15 Since 5th of March 2015}'
-
 set output '..\graphs\Edit-Existing-Subject.png'
-# plot '.\EditExistingSubject-VUmc-ONC-PC306.dat' using 5:xtic(1) with lines title "EditExistingSubject" linetype 7
+unset xtics
+set xtics border out scale 0,7 nomirror rotate by 90 offset character 0, -1.5, 0
+set xtics norangelimit
+set xtics 1,7 nomirror 
 
 
-set yrange[0:50]
-set xlabel "Hours"
-set ylabel "Number of users"
-set title '{/=25 Number of users per hour since 27-03-2015 }'
-set output '..\graphs\Number-Of-Users.png'
-plot '..\..\number-Of-users\number-of-users.txt' using 3:xtic(24) with lines title 'Number of users' linetype 7
+nth(countCol,labelCol,n) = ((int(column(countCol)) % n == 0) ? stringcolumn(labelCol) : "") 
+set key off
+set terminal png large size 1920,1200 font "arial,15"
+plot 'EditExistingSubject-VUmc-ONC-PC306.dat' u ($5):xtic(nth(1,$1,7)) with lines title "EditExistingSubject" linetype 7
 
+# -----------------------------------------
 # Duration of saving section 1 - Diagonsis
-
+# -----------------------------------------
 set yrange[0:2500]
 set xlabel "Measurement"
 set ylabel "Duration [ms]"
 set title '{/=25  Save section 1 (Diagnosis) - VUmc ONC-PC306  }{/=15 Since 7th of August 2015}'
 set output '..\graphs\Save-section-1-Diagnosis.png'
-plot '.\Extended_Section1_Save-VUmc-ONC-PC306.dat' using 9:xtic(24) with lines title 'Duration saving' linetype 7
+plot '.\Extended_Section1_Save-VUmc-ONC-PC306.dat' using 9:xtic(2) with lines title 'Duration saving' linetype 7
 
-# Duration of saving section 2 - Lab
 
-set yrange[0:2500]
-set xlabel "Measurement"
-set ylabel "Duration [ms]"
-set title '{/=25  Save section 2 (Lab) - VUmc ONC-PC306   }{/=15 Since 7th of August 2015}'
-set output '..\graphs\Save-section-2-Lab.png'
-plot '.\Extended_Section2_Save-VUmc-ONC-PC306.dat' using 9:xtic(24) with lines title 'Duration saving' linetype 7
-
-# Duration of saving section 3 - Script
-
-set yrange[0:2500]
-set xlabel "Measurement"
-set ylabel "Duration [ms]"
-set title '{/=25  Save section 3 (Script) - VUmc ONC-PC306   }{/=15 Since 7th of August 2015}'
-set output '..\graphs\Save-section-3-Script.png'
-plot '.\Extended_Section3_Save-VUmc-ONC-PC306.dat' using 9:xtic(24) with lines title 'Duration saving' linetype 7
-
+# -----------------------------------------
 # Duration of Log in
-
-set yrange[0:2500]
+# -----------------------------------------
+set yrange[0:1200]
 set xlabel "Measurement"
 set ylabel "Duration [ms]"
 set title '{/=25  Logging-in - VUmc ONC-PC306   }{/=15 Since 7th of August 2015}'
 set output '..\graphs\Extended_Login.png'
-plot '.\Extended_Login-VUmc-ONC-PC306.dat' using 9:xtic(24) with lines title 'Duration log-in' linetype 7
+plot '.\Extended_Login-VUmc-ONC-PC306.dat' using 9:xtic(2) with lines title 'Duration log-in' linetype 7
 
 
+# -----------------------------------------
+# Click subject-matrix size 15
+# -----------------------------------------
+set yrange[0:2500]
+set xlabel "Measurement"
+set ylabel "Duration [ms]"
+set title '{/=25  Click subject matrix size 15 - VUmc ONC-PC306   }{/=15 Since 7th of August 2015}'
+set output '..\graphs\Click_subject_matrix_size_15.png'
+plot '.\Extended_Edit_Existing_Subject_-_LoadSubjectMatrix_size_15.dat' using 9:xtic(24) with lines title 'Duration log-in' linetype 7
+
+# -----------------------------------------
+# Click subject-matrix size 50
+# -----------------------------------------
+set yrange[0:2500]
+set xlabel "Measurement"
+set ylabel "Duration [ms]"
+set title '{/=25  Click subject matrix size 50 - VUmc ONC-PC306   }{/=15 Since 7th of August 2015}'
+set output '..\graphs\Click_subject_matrix_size_50.png'
+plot '.\Extended_Edit_Existing_Subject_-_LoadSubjectMatrix_size_50.dat' using 9:xtic(24) with lines title 'Duration log-in' linetype 7
+
+# -----------------------------------------
+# Number of users
+# -----------------------------------------
+set yrange[0:50]
+set xlabel "Hours"
+set ylabel "Number of users"
+set title '{/=25 Number of users per hour since 27-03-2015 }'
+set output '..\graphs\Number-Of-Users.png'
+set xtics auto
+plot '..\..\number-Of-users\number-of-users.txt' using 3 with lines title 'Number of users' linetype 7
