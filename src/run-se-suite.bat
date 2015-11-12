@@ -31,7 +31,7 @@ findstr  /R "Duration.*[0-9].*" Results.html | findstr successfully | gawk "{pri
 findstr  /R "_Duration.*[0-9].*" Results.html | gawk "{print $5, $(NF-9), $(NF-8), $(NF-7), $(NF-6), $(NF-5), $(NF-4), $(NF-3), $(NF-2), $(NF-1)}" >> results-runs-extended.txt
 
 
-copy results-runs.txt O:\Pub\dm-algemeen\CTMS\TraIT\WP1\performance-monitoring\VUmc-ONC-PC306
-copy results-runs-extended.txt O:\Pub\dm-algemeen\CTMS\TraIT\WP1\performance-monitoring\VUmc-ONC-PC306
+copy /Y results-runs.txt O:\Pub\dm-algemeen\CTMS\TraIT\WP1\performance-monitoring\VUmc-ONC-PC306
+copy /Y results-runs-extended.txt O:\Pub\dm-algemeen\CTMS\TraIT\WP1\performance-monitoring\VUmc-ONC-PC306
 ECHO Finished
 @ECHO ON
