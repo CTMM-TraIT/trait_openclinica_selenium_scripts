@@ -8,7 +8,7 @@ set datafile separator "\t "
 # -----------------------------------------
 # Editing of an existing subject
 # -----------------------------------------
-set yrange[0:18000]
+set yrange[0:19000]
 set xlabel "Days"
 set ylabel "Time in ms"
 set title '{/=25 Duration Edit Existing Subject - VUmc ONC-PC306   }{/=15 Since 5th of March 2015}'
@@ -29,8 +29,8 @@ plot 'EditExistingSubject-VUmc-ONC-PC306.dat' u ($5):xtic(nth(1,$1,7)) with line
 # -----------------------------------------
 # Duration of saving section 1 - Diagonsis
 # -----------------------------------------
-set yrange[0:4000]
-set ytics 0,250,4000 mirror
+set yrange[0:5000]
+set ytics 0,250,5000 mirror
 set xlabel "Measurement"
 set ylabel "Duration [ms]"
 set title '{/=25  Save section 1 (Diagnosis) - VUmc ONC-PC306  }{/=15 Since 7th of August 2015}'
@@ -40,8 +40,8 @@ plot '.\Extended_Section1_Save-VUmc-ONC-PC306.dat' using 9:xtic(2) with lines ti
 # -----------------------------------------
 # Duration of saving section 2 - Lab
 # -----------------------------------------
-set yrange[0:2500]
-set ytics 0,250,2500 mirror
+set yrange[0:5000]
+set ytics 0,250,5000 mirror
 set xlabel "Measurement"
 set ylabel "Duration [ms]"
 set title '{/=25  Save section 2 (Laboratory) - VUmc ONC-PC306  }{/=15 Since 7th of August 2015}'
@@ -51,8 +51,8 @@ plot '.\Extended_Section2_Save-VUmc-ONC-PC306.dat' using 9:xtic(2) with lines ti
 # -----------------------------------------
 # Duration of saving section 3 - Script
 # -----------------------------------------
-set yrange[0:1000]
-set ytics 0,100,1000 mirror
+set yrange[0:4000]
+set ytics 0,250,4000 mirror
 set xlabel "Measurement"
 set ylabel "Duration [ms]"
 set title '{/=25  Save section 3 (Script) - VUmc ONC-PC306  }{/=15 Since 7th of August 2015}'
@@ -63,8 +63,8 @@ plot '.\Extended_Section3_Save-VUmc-ONC-PC306.dat' using 9:xtic(2) with lines ti
 # -----------------------------------------
 # Duration of Log in
 # -----------------------------------------
-set yrange[0:1500]
-set ytics 0,100,1500 mirror
+set yrange[0:7500]
+set ytics 0,250,7500 mirror
 set xlabel "Measurement"
 set ylabel "Duration [ms]"
 set title '{/=25  Logging-in - VUmc ONC-PC306   }{/=15 Since 7th of August 2015}'
@@ -75,8 +75,8 @@ plot '.\Extended_Login-VUmc-ONC-PC306.dat' using 9:xtic(2) with lines title 'Dur
 # -----------------------------------------
 # Click subject-matrix size 15
 # -----------------------------------------
-set yrange[0:2500]
-set ytics 0,100,2500 mirror
+set yrange[0:3500]
+set ytics 0,200,3500 mirror
 set xlabel "Measurement"
 set ylabel "Duration [ms]"
 set title '{/=25  Click subject matrix size 15 - VUmc ONC-PC306   }{/=15 Since 7th of August 2015}'
@@ -86,8 +86,8 @@ plot '.\Extended_Edit_Existing_Subject_-_LoadSubjectMatrix_size_15.dat' using 9:
 # -----------------------------------------
 # Click subject-matrix size 50
 # -----------------------------------------
-set yrange[0:2500]
-set ytics 0,100,2500 mirror
+set yrange[0:8000]
+set ytics 0,500,8000 mirror
 set xlabel "Measurement"
 set ylabel "Duration [ms]"
 set title '{/=25  Click subject matrix size 50 - VUmc ONC-PC306   }{/=15 Since 7th of August 2015}'
@@ -97,10 +97,10 @@ plot '.\Extended_Edit_Existing_Subject_-_LoadSubjectMatrix_size_50.dat' using 9:
 # -----------------------------------------
 # Number of users
 # -----------------------------------------
-set yrange[0:50]
-set ytics 0,5,50 mirror
-set y2range[0:50]
-set y2tics 0,5,50 mirror
+set yrange[0:30]
+set ytics 0,5,30 mirror
+set y2range[0:30]
+set y2tics 0,5,30 mirror
 set xlabel "Hours"
 set ylabel "Number of users"
 set title '{/=25 Number of users per hour since 27-03-2015 }'
