@@ -1,6 +1,6 @@
 /src/user-extensions.js
-/src/selenium-server-standalone-2.47.1.jar
-/src/selenium-server-standalone-2.44.0.jar
+/src/Results.html
+/src/results-runs.txt
 /graphs/*.png
 /gnuplot/*.dat
 /src/results-runs-extended.txt
