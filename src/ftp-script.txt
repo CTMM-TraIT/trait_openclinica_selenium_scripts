@@ -1,0 +1,5 @@
+open oc-performance@ftptrait.vancis.nl
+cd /data/performance-monitoring/NKI
+put results-runs.txt
+put results-runs-extended.txt
+quit

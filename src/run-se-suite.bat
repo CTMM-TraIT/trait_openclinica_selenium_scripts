@@ -1,6 +1,7 @@
-echo Command-line %~1
+
 SET FIREFOX_PROFILE_NAME=%~1
-echo Firefox executable %FIREFOX_PROFILE_NAME%
+SET FTP_PWD=%~2
+REM echo Firefox executable %FIREFOX_PROFILE_NAME%
 @ECHO OFF
 
 REM
@@ -17,7 +18,7 @@ REM ---------------------------------------------------
 
 if "%1"=="" goto BLANK
 
-java -jar selenium-server-standalone-2.44.0.jar -Dwebdriver.firefox.profile=%FIREFOX_PROFILE_NAME% -trustAllSSLCertificates -avoidProxy -userExtensions user-extensions.js -htmlSuite "*firefox" https://www.openclinica.nl/ test-performance-suite.html Results.html 
+java -jar selenium-server-standalone-2.52.0.jar -Dwebdriver.firefox.profile=%FIREFOX_PROFILE_NAME% -trustAllSSLCertificates -avoidProxy -userExtensions user-extensions.js -htmlSuite "*firefox" https://www.openclinica.nl/ test-performance-suite.html Results.html 
 
 REM ---------------------------------------------------
 REM The date format of selenium is not uniform over different Windows versions.
@@ -29,12 +30,18 @@ REM "<td>Result of test run: test ClickingThrough completed successfully at Wed 
 REM In this case the $17 should be $21; just count the number of tokens separated by a space.
 REM ---------------------------------------------------
 
-findstr  /R "Duration.*[0-9].*" Results.html | findstr successfully | gawk "{print \"%DATE%\t%TIME%\t\"$6,$17}" >> results-runs.txt
+findstr  /R "Duration.*[0-9].*" Results.html | findstr successfully | gawk "{print \"%DATE%\t%TIME%\t\"$6,$21s}" >> results-runs.txt
 findstr  /R "_Duration.*[0-9].*" Results.html | gawk "{print $5, $(NF-9), $(NF-8), $(NF-7), $(NF-6), $(NF-5), $(NF-4), $(NF-3), $(NF-2), $(NF-1)}" >> results-runs-extended.txt
 
 
 REM copy /Y results-runs.txt O:\Pub\dm-algemeen\CTMS\TraIT\WP1\performance-monitoring\VUmc-ONC-PC306
 REM copy /Y results-runs-extended.txt O:\Pub\dm-algemeen\CTMS\TraIT\WP1\performance-monitoring\VUmc-ONC-PC306
+
+REM Now copy the information to the trait-FTP server
+
+psftp -b ftp-script.txt -pw %FTP_PWD%
+
+
 ECHO Finished
 GOTO DONE
 
