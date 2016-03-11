@@ -1,3 +1,7 @@
+print "Using hostname        : ", ARG1
+print "Start date            : ", ARG2
+
+
 set yrange[0:70000]
 set xlabel "Day Of Week"
 set ylabel "Time in ms"
@@ -11,7 +15,7 @@ set datafile separator "\t "
 set yrange[0:19000]
 set xlabel "Days"
 set ylabel "Time in ms"
-set title '{/=25 Duration Edit Existing Subject - VUmc ONC-PC306   }{/=15 Since 5th of March 2015}'
+set title '{/=25 Duration Edit Existing Subject - '.ARG1.'   }{/=15 Since '.ARG2.'}'
 set output '..\graphs\Edit-Existing-Subject.png'
 unset xtics
 set xtics border out scale 0,7 nomirror rotate by 90 offset character 0, -1.5, 0
@@ -24,7 +28,7 @@ set xtics 1,7 nomirror
 nth(countCol,labelCol,n) = ((int(column(countCol)) % n == 0) ? stringcolumn(labelCol) : "") 
 set key off
 set terminal png large size 1920,1200 font "arial,15"
-plot 'EditExistingSubject-VUmc-ONC-PC306.dat' u ($5):xtic(nth(1,$1,7)) with lines title "EditExistingSubject" linetype 7
+plot 'EditExistingSubject-'.ARG1.'.dat' u ($5):xtic(nth(1,$1,7)) with lines title "EditExistingSubject" linetype 7
 
 # -----------------------------------------
 # Duration of saving section 1 - Diagonsis
@@ -33,9 +37,9 @@ set yrange[0:5000]
 set ytics 0,250,5000 mirror
 set xlabel "Measurement"
 set ylabel "Duration [ms]"
-set title '{/=25  Save section 1 (Diagnosis) - VUmc ONC-PC306  }{/=15 Since 7th of August 2015}'
+set title '{/=25  Save section 1 (Diagnosis) - '.ARG1.'  }{/=15 Since '.ARG2.'}'
 set output '..\graphs\Save-section-1-Diagnosis.png'
-plot '.\Extended_Section1_Save-VUmc-ONC-PC306.dat' using 9:xtic(2) with lines title 'Duration saving' linetype 7
+plot '.\Extended_Section1_Save-'.ARG1.'.dat' using 9:xtic(2) with lines title 'Duration saving' linetype 7
 
 # -----------------------------------------
 # Duration of saving section 2 - Lab
@@ -44,9 +48,9 @@ set yrange[0:5000]
 set ytics 0,250,5000 mirror
 set xlabel "Measurement"
 set ylabel "Duration [ms]"
-set title '{/=25  Save section 2 (Laboratory) - VUmc ONC-PC306  }{/=15 Since 7th of August 2015}'
+set title '{/=25  Save section 2 (Laboratory) - '.ARG1.'  }{/=15 Since '.ARG2.'}'
 set output '..\graphs\Save-section-2-Laboratory.png'
-plot '.\Extended_Section2_Save-VUmc-ONC-PC306.dat' using 9:xtic(2) with lines title 'Duration saving' linetype 7
+plot '.\Extended_Section2_Save-'.ARG1.'.dat' using 9:xtic(2) with lines title 'Duration saving' linetype 7
 
 # -----------------------------------------
 # Duration of saving section 3 - Script
@@ -55,9 +59,9 @@ set yrange[0:4000]
 set ytics 0,250,4000 mirror
 set xlabel "Measurement"
 set ylabel "Duration [ms]"
-set title '{/=25  Save section 3 (Script) - VUmc ONC-PC306  }{/=15 Since 7th of August 2015}'
+set title '{/=25  Save section 3 (Script) - '.ARG1.'  }{/=15 Since '.ARG2.'}'
 set output '..\graphs\Save-section-3-Script.png'
-plot '.\Extended_Section3_Save-VUmc-ONC-PC306.dat' using 9:xtic(2) with lines title 'Duration saving' linetype 7
+plot '.\Extended_Section3_Save-'.ARG1.'.dat' using 9:xtic(2) with lines title 'Duration saving' linetype 7
 
 
 # -----------------------------------------
@@ -67,9 +71,9 @@ set yrange[0:7500]
 set ytics 0,250,7500 mirror
 set xlabel "Measurement"
 set ylabel "Duration [ms]"
-set title '{/=25  Logging-in - VUmc ONC-PC306   }{/=15 Since 7th of August 2015}'
+set title '{/=25  Logging-in - '.ARG1.'   }{/=15 Since '.ARG2.'}'
 set output '..\graphs\Extended_Login.png'
-plot '.\Extended_Login-VUmc-ONC-PC306.dat' using 9:xtic(2) with lines title 'Duration log-in' linetype 7
+plot '.\Extended_Login-'.ARG1.'.dat' using 9:xtic(2) with lines title 'Duration log-in' linetype 7
 
 
 # -----------------------------------------
@@ -79,7 +83,7 @@ set yrange[0:3500]
 set ytics 0,200,3500 mirror
 set xlabel "Measurement"
 set ylabel "Duration [ms]"
-set title '{/=25  Click subject matrix size 15 - VUmc ONC-PC306   }{/=15 Since 7th of August 2015}'
+set title '{/=25  Click subject matrix size 15 - '.ARG1.'   }{/=15 Since '.ARG2.'}'
 set output '..\graphs\Click_subject_matrix_size_15.png'
 plot '.\Extended_Edit_Existing_Subject_-_LoadSubjectMatrix_size_15.dat' using 9:xtic(24) with lines title 'Duration log-in' linetype 7
 
@@ -90,7 +94,7 @@ set yrange[0:8000]
 set ytics 0,500,8000 mirror
 set xlabel "Measurement"
 set ylabel "Duration [ms]"
-set title '{/=25  Click subject matrix size 50 - VUmc ONC-PC306   }{/=15 Since 7th of August 2015}'
+set title '{/=25  Click subject matrix size 50 - '.ARG1.'   }{/=15 Since '.ARG2.'}'
 set output '..\graphs\Click_subject_matrix_size_50.png'
 plot '.\Extended_Edit_Existing_Subject_-_LoadSubjectMatrix_size_50.dat' using 9:xtic(24) with lines title 'Duration log-in' linetype 7
 
@@ -103,7 +107,7 @@ set y2range[0:30]
 set y2tics 0,5,30 mirror
 set xlabel "Hours"
 set ylabel "Number of users"
-set title '{/=25 Number of users per hour since 27-03-2015 }'
+set title '{/=25 Number of users per hour since '.ARG2.' }'
 set output '..\graphs\Number-Of-Users.png'
 set xtics auto
-plot '..\..\number-Of-users\number-of-users.txt' using 3 with lines title 'Number of users' linetype 7
+# plot '..\..\number-Of-users\number-of-users.txt' using 3 with lines title 'Number of users' linetype 7
