@@ -6,3 +6,7 @@
 /src/results-runs-extended.txt
 /gnuplot/Thumbs.db
 /graphs/Thumbs.db
+/.idea/*
+/JavaTests/target
+/JavaTests/JavaTests.iml
+*.iml
